@@ -4,7 +4,8 @@ ADD package.json /workdir
 
 WORKDIR /workdir
 
-RUN npm install
+# RUN npm install
+RUN npm install --registry=https://registry.npmmirror.com
 ADD ./ /workdir
 
 EXPOSE 3000
